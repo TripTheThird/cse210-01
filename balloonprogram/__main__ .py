@@ -7,17 +7,18 @@ def current_time_ms():
 
 clown = Clown()
 print(current_time_ms())
-first_balloon = clown.buy_balloon(3)
+first_ballon = clown.buy_balloon(3)
 # first_ballon = Clown.buy_balloon(clown, 3)
-second_balloon = clown.buy_balloon(3)
+second_ballon = clown.buy_balloon(3)
 ballon_list = []
 for i in range(10):
     ballon_list.append(clown.buy_balloon(random.randint(1,13)))
 
 print(clown)
+
 # while game is running:
-first_balloon.update(current_time_ms())
-first_balloon.pop()
+first_ballon.update(current_time_ms())
+first_ballon.pop()
 # first_balloon.pop() means Balloon.pop(first_ballon)
 # the self inside of the pop() function refers to whatever object you're using to call
 # the pop() function with

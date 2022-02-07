@@ -5,14 +5,13 @@ class Wallet:
         def __init__(self, amount):
             self._amount = amount
             self._timestamp = time.time()
-
+        
         def get_amount(self):
             return self._amount
 
     def __init__(self, initial_amount):
         self._transactions = []
         self._transactions.append(Wallet.Transaction(initial_amount))
-        
     
     def add_transaction(self, tx_amount):
         self._transactions.append(Wallet.Transaction(tx_amount))
@@ -22,24 +21,19 @@ class Wallet:
         for tx in self._transactions:
             total += tx.get_amount()
         return total
-        
 
     def get_balance(self):
         return self._sum_transactions()
-        
+
     def __str__(self):
-        return "Wallet: " + str(self._sum_transactions)
+        return "Wallet: " + str(self._sum_transactions())
 
     def __repr__(self):
-        return str(self.get_balance())
+        return "W:" + str(self._sum_transactions())
 
 wallets = []
 wallets.append(Wallet(34))
 wallets.append(Wallet(35))
-wallets.append(Wallet(36))
-wallets.append(Wallet(37))
-wallets.append(Wallet(38))
-wallets.append(Wallet(39))
 print(wallets)
 print(wallets[0])
 wallet = Wallet(50)
