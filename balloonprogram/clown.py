@@ -1,10 +1,10 @@
 from balloon import Balloon
-from tank import Tank
+from air_Tank import AirTank
 from wallet import Wallet
 
 class Clown:
     def __init__(self):
-        self._tank = Tank("Helium")
+        self._tank = AirTank("Helium")
         self._wallet = Wallet(0)
     
     def buy_balloon(self, cost) -> Balloon:
